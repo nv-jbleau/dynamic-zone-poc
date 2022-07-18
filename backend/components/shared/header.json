@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_headers",
+  "info": {
+    "name": "header",
+    "icon": "skull",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "alignement": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ]
+    },
+    "label": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

@@ -4,6 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import Moment from "react-moment";
 import Layout from "../../components/layout";
 import Markdown from "react-markdown";
+import DynamicZone from "../../components/dynamicZone/dynamicZone";
 
 export const query = graphql`
   query ArticleQuery($slug: String!) {
@@ -13,6 +14,7 @@ export const query = graphql`
       description
       content
       published_at
+      dynamicZone
       image {
         localFile {
           publicURL
@@ -47,7 +49,7 @@ const Article = ({ data }) => {
   return (
     <Layout seo={seo}>
       <div>
-        <div style={{ display: "grid" }}>
+        {/* <div style={{ display: "grid" }}>
           <GatsbyImage
             style={{
               gridArea: "1/1",
@@ -68,13 +70,13 @@ const Article = ({ data }) => {
           >
             <h1 style={{ color: `white` }}>{article.title}</h1>
           </div>
-        </div>
+        </div> */}
         <div className="uk-section">
           <div className="uk-container uk-container-small">
-            <Markdown source={article.content} escapeHtml={false} />
+
+            <DynamicZone data={article.dynamicZone} />
 
             <hr className="uk-divider-small" />
-
             <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
               <div>
                 {article.author.picture && (
