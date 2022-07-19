@@ -1,7 +1,10 @@
-.block {
+.image {
   float: left;
-  background-color: aquamarine;
-  height: 250px;
-  width: 250px;
+  max-height: 250px;
+  width: auto;
   margin: 0 10px 10px 0; 
+}
+.section {
+  max-width: 1200px;
+  margin: 10px auto;
 }

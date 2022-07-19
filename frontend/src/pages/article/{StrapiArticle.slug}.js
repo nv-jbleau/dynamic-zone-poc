@@ -50,7 +50,7 @@ const Article = ({ data }) => {
     <Layout seo={seo}>
       <div>
         <div className="uk-section">
-          <div className="uk-container uk-container-small">
+          <div className="uk-container ">
 
             <DynamicZone data={article.dynamicZone} />
 

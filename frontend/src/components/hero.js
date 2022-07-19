@@ -5,16 +5,11 @@ import React from 'react';
 const Hero = ({data}) => {
   console.log('hero data', data)
   const {text, image} = data
+
+  const path = `http://localhost:1337${image.url}`
   return (
     <div style={{ display: "grid" }}>
-      <GatsbyImage
-        style={{
-          gridArea: "1/1",
-        }}
-        image={image}
-        layout="fullWidth"
-        alt=""
-      /> 
+      <img alt="alt" src={path} style={{ gridArea: "1/1"}}/> 
       <div
         style={{
           // By using the same grid area for both, they are stacked on top of each other
@@ -25,7 +20,7 @@ const Hero = ({data}) => {
           display: "grid",
         }}
       >
-        <h1 style={{ color: `gray` }}>{text}</h1>
+        <h1 style={{ color: `white` }}>{text}</h1>
       </div>
     </div>
     // <h1 style={{ color: `black` }}>{data.text}</h1>
