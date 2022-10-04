@@ -1,15 +1,15 @@
-import { GatsbyImage } from 'gatsby-plugin-image';
-import React from 'react';
+import { GatsbyImage } from "gatsby-plugin-image";
+import React from "react";
 // TODO image
 
-const Hero = ({data}) => {
-  console.log('hero data', data)
-  const {text, image} = data
+const Hero = ({ data }) => {
+  console.log("hero data", data);
+  const { text, image } = data;
 
-  const path = `http://localhost:1337${image.url}`
+  const path = `http://localhost:1337${image.url}`;
   return (
     <div style={{ display: "grid" }}>
-      <img alt="alt" src={path} style={{ gridArea: "1/1"}}/> 
+      <img alt="alt" src={path} style={{ gridArea: "1/1" }} />
       <div
         style={{
           // By using the same grid area for both, they are stacked on top of each other
@@ -24,9 +24,7 @@ const Hero = ({data}) => {
       </div>
     </div>
     // <h1 style={{ color: `black` }}>{data.text}</h1>
+  );
+};
 
-    
-  )
-}
-
-export default Hero
+export default Hero;

@@ -1,3 +1,37 @@
+
+const {createRemoteFileNode} = require('gatsby-source-filesystem');
+
+exports.createResolvers = async ({
+  actions, 
+  cache, 
+  createNodeId,
+  createResolvers, 
+  store, 
+  reporter, 
+
+}) => {
+  const {createNode} = actions
+
+  await createResolvers({
+    potato_UploadFile: {
+      imageFile: {
+        type: 'File',
+        async resolve(source) {
+          let sourceUrl = 'localhost:1337'
+          return await createRemoteFileNode({
+            url: sourceUrl,
+            store,
+            cache,
+            createNode,
+            createNodeId,
+            reporter
+          })
+        }
+      }
+    }
+  })
+}
+
 exports.onCreateWebpackConfig = ({
     actions,
     plugins,
@@ -20,4 +54,4 @@ exports.onCreateWebpackConfig = ({
         ]
       })
     }
-  }
+  } 

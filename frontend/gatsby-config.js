@@ -21,6 +21,14 @@ module.exports = {
         queryLimit: 1000,
       },
     },
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+          typeName: 'potato',
+          fieldName: 'potato',
+          url: `http://localhost:1337/graphql`,
+      },
+    },
     "gatsby-plugin-image",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
