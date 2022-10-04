@@ -10,4 +10,4 @@
 
 1. Navigate to /frontend
 2. Run `npm install`
-3. Run `npm run develop
+3. Run `npm run develop`
